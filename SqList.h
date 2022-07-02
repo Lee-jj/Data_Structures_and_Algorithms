@@ -1,10 +1,10 @@
 #pragma once // 希望头文件只编译一次
 
 // 定义状态
-enum Status
+typedef enum Status
 {
     success, fail, fatal, Range_error
-};
+}Status;
 
 // 线性表的数据类型
 typedef int ElemType;
