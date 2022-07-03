@@ -18,6 +18,7 @@ typedef struct SqList
 }SqList, *Ptr;
 typedef Ptr SqListPtr;
 
+// 线性表基本功能
 Status List_Init(SqListPtr L);
 void List_Destory(SqListPtr L);
 void List_Clear(SqListPtr L);
@@ -29,4 +30,7 @@ Status List_Insert(SqListPtr L, int pos, ElemType elem);
 Status List_Delete(SqListPtr L, int pos);
 Status List_Prior(SqListPtr L, int pos, ElemType *elem);
 Status List_Next(SqListPtr L, int pos, ElemType *elem);
+
+// 测试线性表基本功能
+void List_Print(SqListPtr L);
 

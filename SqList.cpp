@@ -10,7 +10,7 @@ using namespace std;
 Status List_Init(SqListPtr L)
 {
     Status s = fail;
-    if (L == NULL)
+    if (L != NULL)
     {
         L->elem = (ElemType *) malloc((LIST_INIT_SIZE + 1) * sizeof(ElemType)); // 分配内存
         if (L->elem)
@@ -165,11 +165,17 @@ Status List_Next(SqListPtr L, int pos, ElemType *elem)
     return s;
 }
 
-// 主函数
-int main()
+// 打印线性表
+void List_Print(SqListPtr L)
 {
-    cout << "hello world!" << endl;
-
-    system("pause");
-    return 0;
+    if (L)
+    {
+        printf("\n***** Now Print List ***** \n");
+        for (int i = 1; i <= L->length; i++)
+        {
+            printf("%d ", L->elem[i]);
+        }
+        printf("\n***** Print List successful ***** \n");
+    }
 }
+
