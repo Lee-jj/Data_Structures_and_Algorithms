@@ -1,9 +1,9 @@
 #include <iostream>
-#include "TestSqList.h"
+#include "TestLkList.h"
 using namespace std;
 
 // 创建线性表
-Status Test_CreateList(SqListPtr list, ElemType data [], int n)
+Status Test_CreateList(LkListPtr list, ElemType data [], int n)
 {
     Status s = fail;
     s = List_Init(list);
@@ -21,7 +21,7 @@ Status Test_CreateList(SqListPtr list, ElemType data [], int n)
 }
 
 // 清空线性表
-Status Test_ClearList(SqListPtr list)
+Status Test_ClearList(LkListPtr list)
 {
     Status s = fail;
     if (!(List_Empty(list)))
@@ -34,7 +34,7 @@ Status Test_ClearList(SqListPtr list)
 }
 
 // 找到指定位置的直接前驱和直接后继 
-Status Test_RetrivalPriorNext(SqListPtr list, int pos)
+Status Test_RetrivalPriorNext(LkListPtr list, int pos)
 {
     Status s = fail;
     ElemType e;
@@ -56,7 +56,7 @@ Status Test_RetrivalPriorNext(SqListPtr list, int pos)
 }
 
 // 在线性表已经存在的情况下定位某个元素
-Status Test_Locate(SqListPtr list, ElemType e)
+Status Test_Locate(LkListPtr list, ElemType e)
 {
     Status s = fail;
     int pos;
@@ -68,7 +68,7 @@ Status Test_Locate(SqListPtr list, ElemType e)
 }
 
 // 线性表的大小
-void Test_Size(SqListPtr list)
+void Test_Size(LkListPtr list)
 {
     int len;
     len = List_Size(list);
